@@ -1,0 +1,10 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - pip3 install --upgrade awscli
+      - npm install
+      - rm package.json
+      - rm -rf .git
+      - aws s3 sync --delete . $APP_BUCKET/apps/nbhjam
