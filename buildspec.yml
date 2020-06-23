@@ -6,5 +6,6 @@ phases:
       - pip3 install --upgrade awscli
       - npm install
       - rm package.json
+      - rm package-lock.json.json
       - rm -rf .git
       - aws s3 sync --delete . $APP_BUCKET/apps/nbhjam
