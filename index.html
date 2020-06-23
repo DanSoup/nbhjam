@@ -11,15 +11,15 @@
     font-family: 'Courier New', Courier, monospace;
   }
 
-  header {
-
+  body {
+    background-color: white;
   }
 
-  section > h1 {
+  article > h1 {
     font-size: 20px;
   }
 
-  section > h2 {
+  article > h2 {
     font-size: 15px;
   }
 
@@ -27,11 +27,38 @@
     max-width: 95vw;
   }
 
+  button {
+    margin: 10px 0px;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border: solid white 3px;
+    padding: 5px 10px;
+  }
+
+  button:hover {
+    border: solid black 3px;
+    background-color: white;
+    color: black;
+  }
+
+  button:active {
+    border: solid black 3px;
+    background-color: black;
+    color: white;
+  }
+
+  body.dark {
+    filter: invert();
+    background-color: black;
+  }
+
 </style>
 <body>
   <header>
     <h1>Neighbourhood Game Jam</h1>
     <h2>Dan Soup's Dev Diary</h2>
+    <button onclick="activateNightmode()">nightmode</button>
   </header>
   <navigation>
     <a href="https://itch.io/jam/nbhjam">itch.io page</a>
@@ -40,7 +67,7 @@
     -
     <a href="https://twitter.com/DanielSoup">my twitter</a>
   </navigation>
-  <section>
+  <article>
     <h1>Day 1</h1>
     <h2>22 / 06 / 2020</h2>
     <p>
@@ -59,9 +86,14 @@
     <p>
       Tomorrow I'll try to get a basic demo with a little bit of animation up and running. Once I see stuff moving I think the motivation will pick up.
     </p>
-  </section>
+  </article>
   <footer>
     &copy; Copyright 2020, Dan Soup
   </footer>
 </body>
+<script>
+  const activateNightmode = () => {
+    document.getElementsByTagName('body')[0].classList.toggle('dark')
+  };
+</script>
 </html>
