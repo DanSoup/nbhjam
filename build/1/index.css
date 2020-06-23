@@ -1,0 +1,33 @@
+body {
+  background-color: #dddddd;
+}
+
+#alpha {
+  background-image: url('../../images/characters/alpha.png');
+}
+
+.character {
+  top: 0px;
+  left: 0px;
+  width: 320px;
+  height: 320px;
+  background-position: 0px;
+  position: absolute;
+  transition: top 1s linear, left 1s linear;
+}
+
+.left {
+  transform: scaleX(-1);
+}
+
+.walk {
+  animation: walk 0.75s steps(1) 0s infinite;
+}
+
+@keyframes walk {
+  0% {background-position: 320px;}
+  25% {background-position: 0px;}
+  50% {background-position: 640px;}
+  75% {background-position: 0px;}
+  100% {background-position: 320px;}
+}
