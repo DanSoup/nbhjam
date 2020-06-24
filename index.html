@@ -28,6 +28,10 @@
     font-size: 15px;
   }
 
+  article {
+    margin-bottom: 50px;
+  }
+
   img {
     max-width: 95vw;
   }
@@ -62,6 +66,10 @@
     background-color: black;
   }
 
+  .bg-grey {
+    background-color: #888888;
+  }
+
 </style>
 <body>
   <header>
@@ -70,12 +78,29 @@
     <button id="nightmode-button" onclick="activateNightmode()">nightmode</button>
   </header>
   <navigation>
+    <a href="current">current build</a>
+    -
     <a href="https://itch.io/jam/nbhjam">itch.io page</a>
     -
     <a href="https://www.eventbrite.co.uk/e/the-neighbourhood-jam-tickets-108966991204">eventbrite page</a>
     -
     <a href="https://twitter.com/DanielSoup">my twitter</a>
   </navigation>
+  <article>
+    <h1>Day 2</h1>
+    <h2>23 / 06 / 2020</h2>
+    <a href="build/1">build link</a>
+    <p>
+      First bit of coding. Glad I've got something up. I stole the idea from an interactive portfolio I saw that made a platformer game using html, css and js. The animations were done by using s div with a background image and changing the offset. I essentially have a spritesheet and cycle between each one to make the animation. It turned out a lot better than I thought it might. It actually looks like a thing walking around.
+    </p>
+    <img class="bg-grey" src="build/1/images/characters/alpha.png">
+    <p>
+      There's only a little logic in there. They walk to a new location every couple of seconds. They have a set speed by setting the css transition time to be proportional to the distance moved. A css transform is used to turn them left if they are moving to the left although in future this will probably be a new row in the spritesheet as characters may not always be symmetrical. A tiny thing I'd like to do is set them up so they can start walking on either their left or right leg just as a little bit of variety. I'm also going to have to remember perspective when calculating the characters speed.
+    </p>
+    <p>
+      I'm moving my PC to the other side of the room tomorrow. With that and my full time job I'm not sure how much time I'm going to be able to dedicate to the project. At the very least I'll be able to do some sketches while waiting for builds and tests to run at my job. For the next step I'd like to get an initial scene sorted then perhaps work on some art.
+    </p>
+  </article>
   <article>
     <h1>Day 1</h1>
     <h2>22 / 06 / 2020</h2>
