@@ -13,6 +13,11 @@
 
   body {
     background-color: white;
+    transition: 0.5s;
+  }
+
+  header > h2 {
+    margin-bottom: 0px;
   }
 
   article > h1 {
@@ -25,6 +30,10 @@
 
   img {
     max-width: 95vw;
+  }
+
+  #nightmode-button {
+    width: 200px;
   }
 
   button {
@@ -58,7 +67,7 @@
   <header>
     <h1>Neighbourhood Game Jam</h1>
     <h2>Dan Soup's Dev Diary</h2>
-    <button onclick="activateNightmode()">nightmode</button>
+    <button id="nightmode-button" onclick="activateNightmode()">nightmode</button>
   </header>
   <navigation>
     <a href="https://itch.io/jam/nbhjam">itch.io page</a>
@@ -93,7 +102,10 @@
 </body>
 <script>
   const activateNightmode = () => {
-    document.getElementsByTagName('body')[0].classList.toggle('dark')
+    const body = document.getElementsByTagName('body')[0];
+    body.classList.toggle('dark');
+    const night = body.classList.contains('dark');
+    document.getElementById('nightmode-button').innerText = night ? 'daymode' : 'nightmode';
   };
 </script>
 </html>
