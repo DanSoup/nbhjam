@@ -7,23 +7,20 @@ body {
   background-image: url('./images/characters/alpha.png');
 }
 
-.grey-tile {
-  background-image: url('./images/grey_tile.png');
-  background-size: contain;
-  position: absolute;
-  /* outline: solid 1px #00ffff */
+#floor {
+  position: relative;
+  top: 400px;
 }
 
 .character {
-  bottom: 0px;
+  top: 0px;
   left: 0px;
   width: 320px;
   height: 320px;
   background-position: 0px;
   position: absolute;
-  transition: bottom 1s linear, left 1s linear;
+  transition: top 1s linear, left 1s linear;
   outline: solid 1px red;
-  z-index: 2;
 }
 
 .left {
